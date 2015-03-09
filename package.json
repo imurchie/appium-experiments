@@ -1,0 +1,41 @@
+{
+  "name": "appium-experiments",
+  "description": "Random tests to try things out",
+  "tags": [
+    "rando",
+    "appium",
+    "stuff"
+  ],
+  "version": "0.0.1",
+  "author": "https://github.com/imurchie",
+  "licenses": [
+    {
+      "type": "apache-2.0",
+      "url": "https://raw.github.com/appium/appium/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imurchie/appium-experiments.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imurchie/appium-experiments/issues"
+  },
+  "engines": [
+    "node"
+  ],
+  "directories": {
+    "android": "./android",
+    "ios": "./ios"
+  },
+  "dependencies": {
+    "appium": "~1.3.6",
+    "chai": "^2.1.1",
+    "chai-as-promised": "^4.3.0",
+    "colors": "^1.0.3",
+    "wd": "^0.3.11"
+  },
+  "scripts": {
+    "test": "mocha -t 90000 -R spec"
+  }
+}
