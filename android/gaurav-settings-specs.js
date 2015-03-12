@@ -46,13 +46,14 @@ describe("drag and drop", function () {
 
   it('should move the element correctly', function (done) {
     driver
-      .elementByClassName('android.widget.ListView')
+      .sleep(2000)
+      .waitForElementByClassName('android.widget.ListView')
         .then(function (list) {
           return list.elementsByClassName('android.widget.TextView');
         })
         .then(function (els) {
           var action = new TouchAction(driver);
-          return action.longPress({el: els[els.length-1]}).moveTo({ el: els[0] }).release().perform();
+          return action.longPress({el: els[els.length-1], duration: 1500}).moveTo({ el: els[0] }).release().perform();
         })
       .sleep(10000)
       .nodeify(done);
